@@ -60,7 +60,7 @@ buildFHSEnv {
   meta = {
     description = "Foxglove visualization and debugging tool for robotics :D";
     homepage = "https://foxglove.dev";
-    license = lib.license.unfree;
+    license = lib.licenses.unfree;
     platforms = [ "x86_64-linux" "aarch64-linux" ];
     mainProgram = "foxglove-studio";
   };

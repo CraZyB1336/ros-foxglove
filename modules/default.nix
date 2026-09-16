@@ -27,7 +27,7 @@ in
       enable = mkEnableOption "Foxglove Studio";
       package = mkOption {
         type = types.package;
-        default = self.package.${system}.foxglove-studio;
+        default = self.packages.${system}.foxglove-studio;
         defaultText = literalExpression "ros-foxglove.packages.\${system}.foxglove-studio";
       };
     };
