@@ -12,7 +12,7 @@ let
     inherit version;
 
     src = fetchurl {
-      url = "https://get.foxglove.dev/desktop/v$version}/foxglove-studio-${version}-linux-${arch.deb}.deb";
+      url = "https://get.foxglove.dev/desktop/v${version}/foxglove-studio-${version}-linux-${arch.deb}.deb";
       inherit (arch) hash;
     };
 
