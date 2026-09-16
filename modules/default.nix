@@ -44,8 +44,8 @@ in
 
       packages = mkOption {
         type = types.functionTo (types.listOf types.package);
-        default = p: [ p.ros-core p.rviz2 p.demo-nodes-cpp p.ament-cmake-core p.python-cmake-module ];
-        example = literalExpression "p: [ p.ros-core p.rviz2 p.demo-nodes-cpp p.ament-cmake-core p.python-cmake-module ]";
+        default = p: [  ];
+        example = literalExp.ros-core p.rviz2 p.demo-nodes-cpp p.ament-cmake-core p.python-cmake-modulepression "p: [ p.ros-core p.rviz2 p.demo-nodes-cpp p.ament-cmake-core p.python-cmake-module ]";
         description = "ROS packages to install";
       };
 
@@ -62,7 +62,7 @@ in
       };
     } // lib.optionalAttrs (!isHomeManager) {
       useBinaryCache = mkOption {
-        types = types.bool;
+        type = types.bool;
         default = true;
         description = "Add ros.cachix.org as a substituter";
       };
