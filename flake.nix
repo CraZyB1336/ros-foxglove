@@ -22,7 +22,7 @@
       };
 
       nixosModules.default = import ./modules { inherit self; };
-      homeManagerModules.default = import ./modules { inherit self; isHomeManager = true};     
+      homeManagerModules.default = import ./modules { inherit self; isHomeManager = true; };     
     }
     // nix-ros-overlay.inputs.flake-utils.lib.eachSystem systems (system:
       let pkgs = pkgsFor system; in
