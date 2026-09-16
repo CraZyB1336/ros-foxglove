@@ -2,8 +2,8 @@
 let
   version = "2.45.0";
   arch = {
-    x86_64-linux = { deb = "amd64"; hash = lib.fakeHash; };
-    aarch64-linux = { deb = "arm64"; hash = lib.fakeHash; };
+    x86_64-linux = { deb = "amd64"; hash = "sha256-T71+TIRPI7EKCkwh0F456kdo1ILlcOjxWfOTcgIbqiQ="; };
+    aarch64-linux = { deb = "arm64"; hash = "sha256-T71+TIRPI7EKCkwh0F456kdo1ILlcOjxWfOTcgIbqiQ="; };
   }.${stdenv.hostPlatform.system}
     or (throw "foxglove-studio: unsupported system ${stdenv.hostPlatform.system}");
 
