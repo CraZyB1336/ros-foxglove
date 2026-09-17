@@ -36,9 +36,9 @@ buildFHSEnv {
     gtk3 pango cairo at-spi2-core libdrm libxkbcommon
     libGL mesa (p.libgbm or p.mesa) vulkan-loader
     libsecret libnotify
-    xorg.libX11 xorg.libXcomposite xorg.libXdamage xorg.libXext
-    xorg.libXfixes xorg.libXrandr xorg.libxcb xorg.libxkbfile
-    xorg.libXScrnSaver xorg.libXtst xorg.libXi xorg.libXcursor
+    libx11 libxcomposite libxdamage libxext
+    libxfixes libxrandr libxcb libxkbfile
+    libxscrnsaver libxtst libxi libxcursor
   ];
 
   runScript = writeShellScript "foxglove-run" ''
