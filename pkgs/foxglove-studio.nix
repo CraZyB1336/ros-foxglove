@@ -3,7 +3,7 @@ let
   version = "2.45.0";
   arch = {
     x86_64-linux = { deb = "amd64"; hash = "sha256-T71+TIRPI7EKCkwh0F456kdo1ILlcOjxWfOTcgIbqiQ="; };
-    aarch64-linux = { deb = "arm64"; hash = "sha256-T71+TIRPI7EKCkwh0F456kdo1ILlcOjxWfOTcgIbqiQ="; };
+    # aarch64-linux = { deb = "arm64"; hash = lib.fakeHash; };
   }.${stdenv.hostPlatform.system}
     or (throw "foxglove-studio: unsupported system ${stdenv.hostPlatform.system}");
 
@@ -31,7 +31,7 @@ in
 buildFHSEnv {
   name = "foxglove-studio";
 
-  targetpkgs = p: with p; [
+  targetPkgs = p: with p; [
     glib nss nspr cups dbus expat alsa-lib systemd udev
     gtk3 pango cairo at-spi2-core libdrm libxkbcommon
     libGL mesa (p.libgbm or p.mesa) vulkan-loader
