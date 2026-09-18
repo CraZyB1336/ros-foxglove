@@ -54,6 +54,7 @@
                 foxglove-bridge
                 vision-msgs
                 cv-bridge
+                pcl_conversions
               ];
             })
           ];
