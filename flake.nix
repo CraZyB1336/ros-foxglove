@@ -54,9 +54,15 @@
                 foxglove-bridge
                 vision-msgs
                 cv-bridge
-                pcl_conversions
               ];
             })
+          ];
+
+          buildInputs = [
+            pkgs.pcl
+            pkgs.eigen
+            pkgs.boost
+            pkgs.flann
           ];
           shellHook = ''
             [ -f install/setup.bash ] && source install/setup.bash
