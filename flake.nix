@@ -57,10 +57,6 @@
               ];
             })
           ];
-
-          buildInputs = [
-            pkgs.pcl
-          ];
           shellHook = ''
             [ -f install/setup.bash ] && source install/setup.bash
           '';
