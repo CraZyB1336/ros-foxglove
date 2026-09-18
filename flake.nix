@@ -47,23 +47,13 @@
             (with pkgs.rosPackages.humble; buildEnv {
               underlay = true;
               paths = [ 
-                ament_copyright
-                builtin_interfaces
-                cv_bridge
-                foxglove_bridge
-                geometry_msgs
-                pcl_conversions
-                python3-pytest
-                rclcpp
-                rclpy
-                rosidl_default_runtime
-                sensor_msgs
-                std_msgs
-                talker
-                tf2_ros
-                transit_msgs
-                vision_msgs
-                visualization_msgs
+                ros-core
+                ament-cmake-core
+                python-cmake-module
+                demo-nodes-cpp
+                foxglove-bridge
+                vision-msgs
+                cv-bridge
               ];
             })
           ];
