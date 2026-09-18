@@ -46,7 +46,15 @@
             pkgs.foxglove-studio
             (with pkgs.rosPackages.humble; buildEnv {
               underlay = true;
-              paths = [ ros-core ament-cmake-core python-cmake-module demo-nodes-cpp foxglove-bridge rviz2 ];
+              paths = [ 
+                ros-core
+                ament-cmake-core
+                python-cmake-module
+                demo-nodes-cpp
+                foxglove-bridge
+                vision-msgs
+                cv-bridge 
+              ];
             })
           ];
           shellHook = ''
